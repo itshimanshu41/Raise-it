@@ -8,7 +8,6 @@ const {
   roleAuthenticationMiddleware,
 } = require("../middleware/roleAuthentication");
 var nodemailer = require("nodemailer");
-// const client = require('twilio')(accountSid, authToken);
 
 const getAllComplaints = async (req, res) => {
   const complaints = await Complaint.find({ createdBy: req.user.userId }).sort(
